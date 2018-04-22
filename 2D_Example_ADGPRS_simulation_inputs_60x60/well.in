@@ -1,0 +1,27 @@
+WELSPECS
+PRD1  PRD  10    5 4* HALT NO /
+PRD2  PRD  30    5 4* HALT NO /
+PRD3  PRD  50    5 4* HALT NO /
+INJ1  INJ  5     55 *  4*  NO /
+INJ2  INJ  22    55 *  4*  NO /
+INJ3  INJ  38    55 *  4*  NO /
+INJ4  INJ  55    55 *  4*  NO /
+/
+
+COMPDAT
+PRD1   10    5      1  1  OPEN  *  *  4*  Z/
+PRD2   30    5      1  1  OPEN  *  *  4*  Z/
+PRD3   50    5      1  1  OPEN  *  *  4*  Z/
+INJ1   5     55     1  1  OPEN  *  *  4*  Z/
+INJ2   22    55     1  1  OPEN  *  *  4*  Z/
+INJ3   38    55     1  1  OPEN  *  *  4*  Z/
+INJ4   55    55     1  1  OPEN  *  *  4*  Z/
+/
+
+WELLSTRE
+-- composition of injected fluid (water - oil)
+INJ1  1.0  0.0 /
+INJ2  1.0  0.0 /
+INJ3  1.0  0.0 /
+INJ4  1.0  0.0 /
+/
