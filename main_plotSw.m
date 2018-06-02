@@ -23,7 +23,8 @@ NwDrill = 11;
 % Simulation time (in days):
 ctrlPeriodVec = 3060;
 % The directory where the .vars.txt file is located
-wpath = '';  
+wpath = '3D_Example_files\';  
+disp('Please unzip 3D_Example_files')
 % Locations of producer wells: Each horizontal well is constrained to lay in y-direction, in the same layer
 %   i ,j1, j2, k, injNumber, WellNumber ==> i: x-index
 %                                           j1: y-index (first block)
@@ -72,3 +73,7 @@ Tend = ctrlPeriodVec(end);
 [sw,tvec2] = readSw(swfileName,Tend, Nx, Ny, Nz, tvec);
 plotSwMaps(Nx,Ny,Nz, ninj,nprod,injLocs,prodLocs,sw,Sor,Swi,tvec2,tvecWell,NwDrill,'end');
 % plotSwMaps(Nx,Ny,Nz, ninj,nprod,injLocs,prodLocs,sw,Sor,Swi,tvec2,tvecWell,NwDrill,'all');
+
+rateFileName = [wpath 'OUTPUT1.rates.txt'];
+% main file for plotting rates:
+[t,npv, fop, fwp, fwi] =  plotRates_adgprs(rateFileName, nprod, ninj, ro, cwp, cwi,wellcost );
